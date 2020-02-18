@@ -99,15 +99,17 @@ El servidor tiene el DNS https://www3.gobiernodecanarias.org
 
 El servidor tiene la siguiente dirección IP: 93.188.137.126
 
-![IP]()
+![IP](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/ip_citaprevia.png)
 
 **6.¿La página tiene alguna cookie?, ¿Cuáles?.**
+
+Sí, tiene 3 cookies.
 
 - \_ga
 - \_gid
 - ASP.NET_SessionId
 
-![Cookie]()
+![Cookie](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/cookies_citaprevia.png)
 
 **7.¿Qué idioma acepta?.**
 
@@ -134,7 +136,6 @@ function Checker(n,t){
 .container{border:1px solid #ddd;padding-top:25px;padding-bottom:25px;background:#fff;box-shadow:1px 1px 1px #888}
 ```
 
-
 **10.Alguna línea de código HTML que se aplique.**
 
 ```
@@ -149,7 +150,7 @@ function Checker(n,t){
 <body>
          <div class="container" style="padding-top:10px;">
              <div class="header clearfix" style="padding-bottom:5px;padding-top: 20px;">
-                <div class="col-lg-12 text-right">        
+                <div class="col-lg-12 text-right">
                 ...
 </body>
 <\html>

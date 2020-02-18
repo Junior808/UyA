@@ -18,7 +18,7 @@ Los código de estatus de las peticiones son:
 - 302:  Moved permanenty
 - 200:  OK
 
-![Error al cargar la imagen]()
+![Error al cargar la imagen](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/codigo-status.png)
 
 4.Qué DNS tiene el servidor
 
@@ -74,7 +74,7 @@ Hay varios ficheros HTML. El siguiente código corresponde al html principal (in
 </html>
 ~~~
 
-#### http://www3.gobiernodecanarias.org/sanidad/scs/gc/18/Cita_Previa/index.html
+#### [Página de Cita Previa](http://www3.gobiernodecanarias.org/sanidad/scs/gc/18/Cita_Previa/index.html)
 
 1.Qué peticiones desencadena la consulta.
 

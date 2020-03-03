@@ -18,7 +18,7 @@ Los código de estatus de las peticiones son:
 - 302: Moved permanenty
 - 200: OK
 
-![Error al cargar la imagen](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/codigo-status.png)
+![Error al cargar la imagen](images/codigo-status.png)
 
 **4.Qué DNS tiene el servidor.**
 
@@ -28,7 +28,7 @@ El servidor tiene el DNS: www.gobiernodecanarias.org
 
 El servidor tiene la siguiente dirección IP: 93.188.137.123
 
-![IP](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/dir_IP.png)
+![IP](images/dir_IP.png)
 
 **6.¿La página tiene alguna cookie?, ¿Cuáles?.**
 
@@ -37,13 +37,13 @@ Sí, son dos.
 - \_ga
 - \_gid
 
-![Cookies](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/cookies.png)
+![Cookies](images/cookies.png)
 
 **7.¿Qué idioma acepta?.**
 
 El idioma que acepta es el Español.
 
-![Español](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/idioma.png)
+![Español](images/idioma.png)
 
 **8.Alguna línea de código JavaScript.**
 
@@ -99,7 +99,7 @@ El servidor tiene el DNS https://www3.gobiernodecanarias.org
 
 El servidor tiene la siguiente dirección IP: 93.188.137.126
 
-![IP](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/ip_citaprevia.png)
+![IP](images/ip_citaprevia.png)
 
 **6.¿La página tiene alguna cookie?, ¿Cuáles?.**
 
@@ -109,13 +109,13 @@ Sí, tiene 3 cookies.
 - \_gid
 - ASP.NET_SessionId
 
-![Cookie](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/cookies_citaprevia.png)
+![Cookie](images/cookies_citaprevia.png)
 
 **7.¿Qué idioma acepta?.**
 
 El idioma que acepta es el Español.
 
-![Español](https://github.com/Junior808/UyA/blob/master/Pr%C3%A1ctica%201/images/idioma.png)
+![Español](images/idioma.png)
 
 **8.Alguna línea de código JavaScript.**
 

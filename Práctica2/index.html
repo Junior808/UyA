@@ -29,8 +29,10 @@
         <p>Una aplicación para compartir tiempo </p>
     </div>
 
+    <hr>
+
     <div>
-        <h3> &Aacutembito del sistema</h3>
+        <h3>Lo que ofrecemos... </h3>
         <ol>
             <li><strong>Inspiraci&oacuten</strong> para sus apuntes. </li>
             <li><strong>Aprender</strong> en &aacutereas de inter&eacutes</li>
@@ -38,17 +40,67 @@
         </ol>
     </div>
 
-    <caption><strong>Requisitos de rendimiento</strong> </caption>
-    <table>
-        <tr> <!--Fila1-->
-        <td> N&uacutemeros de usuarios </td> <td> 2000</td> 
+    <hr>
+
+    <h3> Usuarios que más ayudan</h3>
+    <table summary="usuarios que mas ayudab">
+        <tr>
+            <td> <strong>Nombre del usuario &nbsp; &nbsp; </strong></td>
+            <td> <strong>Username &nbsp; &nbsp;</strong></td>
+            <td> <strong>Tiempo empleado</strong> </td>
         </tr>
-        <tr> <!--Fila2-->
-        <td> Acceso a la <abbr>BDD</abbr></td> <td> 1000</td> 
+        <tr>
+            <td> María Pérez </td>
+            <td> @marper </td>
+            <td> 35 horas </td>
+        </tr>
+        <tr>
+            <td> Bernardo Silva </td>
+            <td> @bsilva </td>
+            <td> 34 horas </td>
+        </tr>
+        <tr>
+            <td> Jorge González </td>
+            <td> @jgzlez </td>
+            <td> 29 horas </td>
         </tr>
     </table>
-        
 
+    <hr>
+
+    <div>
+        <h3>Registrarse</h3>
+        <form action="register" method="get">
+            <p>Nombre: <input type="text" name="nombre" size="40"></p>
+            <p>Año de nacimiento: <input type="number" name="nacido" min="1920" max="2020"></p>
+            <p>Sexo:
+                <input type="radio" name="hm" value="h"> Hombre
+                <input type="radio" name="hm" value="m"> Mujer
+            </p>
+            <p>Username: <input type="text" name="username"> </p>
+            <p>Contraseña: <input type="password" name="passwds"> </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Iniciar Sesión</h3>
+        <form action="register" method="get">
+            </p>
+            <p>Username: <input type="text" name="username"> </p>
+            <p>Contraseña: <input type="password" name="passwds"> </p>
+            <p>
+                <input type="submit" value="Entrar">
+            </p>
+        </form>
+    </div>
+
+    <hr>
 
     <footer>
         <div>

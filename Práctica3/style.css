@@ -1,10 +1,8 @@
 html {
   width: 770px;
-
   margin: 0;
   padding: 0;
   color: #000000;
-
   font-size: 1.5em;
   font-family: Arial;
   margin-left: auto;
@@ -17,7 +15,7 @@ body {
 }
 
 footer {
- background-color: #cccccc;
+  background-color: #cccccc;
   width: 770px;
   text-align: center;
   position: fixed;
@@ -26,11 +24,14 @@ footer {
   clear: both;
 }
 
-/* Nuevo */
+.contenido{
+  width: 770px;
+}
 
 .contenido_secundario {
   width: 340px;
   position: fixed;
+  float: left;
 }
 
 .contenido_derecha {
@@ -53,20 +54,11 @@ footer {
   border: none;
 }
 
-/*.imagen {
-  width: 430px;
-  margin: auto;
-  display: block;
-  align-content: center;
-}*/
+.zona_centro{
+  display: inline-block;
+}
 
-/* .barra_nav {
-  position: relative;
-  top: 40px;
-  right: 20px;
-} */
-
-/* esto es para los links de la tabla, no se si funciona bien */
+/* Links de la tabla*/
 table a:link {
   color: green;
 }
@@ -77,15 +69,17 @@ table a:visited {
 
 .principal {
   text-align: center;
-  margin-top: 45px;
+ /* margin-top: 45px;*/
+  width: 330px; 
   /* height: 100px; */
 }
 
-/*.zona_enlaces{
-  width: 238px;  
+.zona_enlaces{
+  width: 100px;  
   float: right;  
   text-align: left;
-}*/
+  margin-top: 300px; 
+}
 
 /* Los enlaces deben ser de color azul en estado normal, 
 y rojo cuando se posiciona el cursor. Si se han visitado

@@ -19,8 +19,8 @@ footer {
   width: 770px;
   text-align: center;
   position: fixed;
-  bottom: 0px;
-  height: 100px; 
+  bottom: 0;
+  height: 95px; 
   clear: both;
 }
 

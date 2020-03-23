@@ -10,14 +10,15 @@ main {
     flex: 1 0 auto;
 }
 
-h3 {
-    color: #ffe0b2;
-}
-
 nav .brand-logo {
     padding-left: 5px;
-<<<<<<< HEAD:Práctica4/css/index.css
 }
-=======
+
+#copyright {
+    margin-top: 50px;
 }
->>>>>>> bb35312fc39573097802db49773c681c75206432:Práctica4/css/index.css
+
+#carousel {
+    width: 1000px;
+    height: 1000px;
+}

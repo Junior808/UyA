@@ -2,6 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 main {
@@ -14,4 +16,8 @@ h3 {
 
 nav .brand-logo {
     padding-left: 5px;
+<<<<<<< HEAD:Práctica4/css/index.css
 }
+=======
+}
+>>>>>>> bb35312fc39573097802db49773c681c75206432:Práctica4/css/index.css

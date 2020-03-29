@@ -6,9 +6,12 @@ let enlaces = document.getElementsByTagName("a");
 let encabezados = document.getElementsByTagName("h2"); // solo cuento los h2
 
 function contar() {
-    console.log(`Número de párrafos: ${parrafos.length}`);
-    console.log(`Número de enlaces: ${enlaces.length}`);
-    console.log(`Número de encabezados (h2): ${encabezados.length}`);
+    let par = `Número de párrafos: ${parrafos.length}`;
+    let enl = `Número de enlaces: ${enlaces.length}`;
+    let enc = `Número de encabezados (h2): ${encabezados.length}`;
+    console.log(par + `\n` + enl + `\n` + enc);
+    alert(par + `\n` + enl + `\n` + enc);
 }
+
 
 contar();

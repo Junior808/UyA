@@ -9,9 +9,21 @@ function contar() {
     let par = `Número de párrafos: ${parrafos.length}`;
     let enl = `Número de enlaces: ${enlaces.length}`;
     let enc = `Número de encabezados (h2): ${encabezados.length}`;
-    console.log(par + `\n` + enl + `\n` + enc);
-    alert(par + `\n` + enl + `\n` + enc);
+
+
+    return (par + `\n` + enl + `\n` + enc);
 }
 
 
 contar();
+
+const texto_contar = document.querySelector(".contarParrafos");
+const boton_contar = document.querySelector(".boton-contar");
+
+boton_contar.onclick = () => {
+
+    const p = document.createElement("p");
+
+    p.textContent = contar();
+    texto_contar.replaceChild(p, texto_contar.childNodes[2]);
+}

@@ -14,12 +14,13 @@ h1 {
   color: #ffffff;
 }
 
-.conversor {
+.contenido {
   display: block;
   background: #37474f;
   color: white;
   width: 75%;
   padding: 30px;
+  padding-top: 0%;
   border: solid 1px silver;
   margin: auto;
   border-radius: 10px;
@@ -39,29 +40,3 @@ select {
   color: black;
   margin-top: 5px;
 }
-
-/* input {
-  display: block;
-  margin: 10px 0;
-  height: 30px;
-  color: #666666;
-}
-
-.contenidos {
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  border: solid 1px silver;
-  width: 300px;
-  margin: auto;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
-label {
-  font-size: 25px;
-}
-
-button {
-  padding: 8px;
-  width: 265px;
-} */

@@ -14,8 +14,8 @@ const usuarioA = {
     nacimiento: new Date(1982, 07, 06), // "6/07/1982",
     fIngreso: new Date(2012, 05, 15), // "15/05/2012",
     plusProductividad: 0.1,
-    productividadbruto: function() {
-        let b = hoy.getFullYear() - new Date(2012, 05, 15).getFullYear(); // calculo los años que lleva trabajados
+    productividadbruto: function () {
+        let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
         b = (b / 3); // los años trabajados los divido entre tres
         b = Math.trunc(b); // me quedo con la parte entera
         b = b * 0.1; // cada 3 años trabajados, incremento el 0.1
@@ -24,19 +24,66 @@ const usuarioA = {
     sueldo: 1500
 }
 
-function calcularEdad(usuario) {
-    let nac = usuario.nacimiento.getFullYear();
-    let edad = hoy.getFullYear() - nac;
-    return edad;
+const usuarioB = {
+    dni: "48858553D",
+    nacimiento: new Date(1964, 02, 29),
+    fIngreso: new Date(2008, 03, 20),
+    plusProductividad: 0.1,
+    productividadbruto: function () {
+        let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
+        b = (b / 3); // los años trabajados los divido entre tres
+        b = Math.trunc(b); // me quedo con la parte entera
+        b = b * 0.1; // cada 3 años trabajados, incremento el 0.1
+        return b; // devuelvo dicho porcentaje
+    },
+    sueldo: 1150
 }
 
-function calcularSueldo(usuario) {
+const usuarioC = {
+    dni: "18465496S",
+    nacimiento: new Date(1977, 10, 05),
+    fIngreso: new Date(2001, 04, 16),
+    plusProductividad: 0.1,
+    productividadbruto: function () {
+        let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
+        b = (b / 3); // los años trabajados los divido entre tres
+        b = Math.trunc(b); // me quedo con la parte entera
+        b = b * 0.1; // cada 3 años trabajados, incremento el 0.1
+        return b; // devuelvo dicho porcentaje
+    },
+    sueldo: 1900
+}
+
+function calcular(usuario) {
+    let nac = usuario.nacimiento.getFullYear();
+    let edad = hoy.getFullYear() - nac;
     let sueldo = usuario.sueldo;
     let auxa = sueldo * usuario.plusProductividad;
     let auxb = sueldo * usuario.productividadbruto();
     sueldo = sueldo + auxa + auxb;
-    return sueldo;
+
+    const resultado = [edad, sueldo];
+
+    return resultado;
 }
 
-console.log(calcularEdad(usuarioA));
-console.log(calcularSueldo(usuarioA));
+function random_item(items) {
+
+    return items[Math.floor(Math.random() * items.length)];
+
+}
+
+const usuarios = [usuarioA, usuarioB, usuarioC];
+const texto = document.querySelector(".sueldo");
+const boton_edad = document.querySelector(".boton-edad");
+
+boton_edad.onclick = () => {
+
+    const p = document.createElement("p");
+    const usuario_aleatorio = random_item(usuarios);
+    const mostrar = calcular(usuario_aleatorio);
+
+    p.textContent = `Usuario ${usuario_aleatorio.dni} de edad ${mostrar[0]} y con sueldo ${mostrar[1]}.`;
+
+    texto.replaceChild(p, texto.childNodes[2]);
+}

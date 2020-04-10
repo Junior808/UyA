@@ -17,3 +17,5 @@
 [Práctica 4: Introducción a Materialize.](Práctica4/)
 
 [Práctica 5: Introducción a JavaScript](Práctica5/)
+
+[Práctica 6: Introducción a AJAX](Práctica6/)

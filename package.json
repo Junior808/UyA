@@ -1,0 +1,25 @@
+{
+  "name": "uya",
+  "version": "1.0.0",
+  "description": "### Grupo 14 del martes. - Damián E. Domínguez De Barros - Bárbara V. García Deus - Laura Cañizares Herrera.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel serve index.html --open",
+    "build": "parcel build index.html -d build --public-url /UyA/",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior808/UyA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junior808/UyA/issues"
+  },
+  "homepage": "https://github.com/Junior808/UyA#readme",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}

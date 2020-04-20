@@ -19,3 +19,7 @@
 [Práctica 5: Introducción a JavaScript](Práctica5/)
 
 [Práctica 6: Introducción a AJAX](Práctica6/)
+
+[Práctica 7: Introducción a Firebase I](Práctica7/)
+
+[Práctica 7: Introducción a Firebase I - Informe](Práctica7-1/)

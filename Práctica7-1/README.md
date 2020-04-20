@@ -72,3 +72,6 @@ buttonObtener.onclick = () => {
 };
 ```
 ![Obteniendo datos](images/obteniendoDatos.png)
+
+#### 5. ¿Por qué el primer console.log en el código es el último que se muestra? 
+Por motivos de sincronía. 

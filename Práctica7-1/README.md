@@ -10,7 +10,7 @@
 
 #### 1. Base de datos antes de las actualizaciones.
 
-![Base de datos antes de las actualizaciones](/images/preActualizacion.png)
+![Base de datos antes de las actualizaciones](images/preActualizacion.png)
 
 #### 2. Insertando nuevo usuario.
 
@@ -26,7 +26,7 @@ buttonInsertar.onclick = () => {
 };
 ```
 
-![Insertando nuevo usuario](/images/nuevoUsuario.png)
+![Insertando nuevo usuario](images/nuevoUsuario.png)
 
 #### 3. Actualizando datos.
 
@@ -46,7 +46,7 @@ buttonCambiar.onclick = () => {
 };
 ```
 
-![Actualizando datos](/images/cambioDatos.png)
+![Actualizando datos](images/cambioDatos.png)
 
 #### 4. Obteniendo datos.
 
@@ -71,4 +71,4 @@ buttonObtener.onclick = () => {
   });
 };
 ```
-![Obteniendo datos](/images/obteniendoDatos.png)
+![Obteniendo datos](images/obteniendoDatos.png)

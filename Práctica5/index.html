@@ -19,7 +19,7 @@
     <h1>Usabilidad y Accesibilidad: Práctica 5</h1>
     <div class="contenido">
         <div class="conversor">
-            <h2>Conversor de divisas.</h2>
+            <h2 tabindex="0">Conversor de divisas.</h2>
             <input class="monto" type="number" min="1" placeholder="Monto">
             <div class="desplegable-1">
                 <select class="divisa-1" required>
@@ -28,7 +28,7 @@
                     <option>USD</option>
                 </select>
             </div>
-            <p>convertir a</p>
+            <p tabindex="0">convertir a</p>
             <div class="desplegable-2">
                 <select class="divisa-2" required>
                     <option>JPY</option>
@@ -36,18 +36,22 @@
                     <option>USD</option>
                 </select>
             </div>
-            <button class="waves-effect btn-small boton-convertir">Convertir</button>
-            <div class="resultado">
+            <button aria-label="Convertir" class="waves-effect btn-small boton-convertir">Convertir</button>
+            <div tabindex="-1" class="resultado1">
             </div>
         </div>
         <div class="sueldo">
-            <h2>Calcular edad y sueldo de usuarios.</h2>
-            <button class="waves-effect btn-small boton-edad">Calcular</button>
+            <h2 tabindex="0">Calcular edad y sueldo de usuarios.</h2>
+            <button aria-label="Calcular" class="waves-effect btn-small boton-edad">Calcular</button>
+            <div tabindex="-1" class="resultado2">
+            </div>
         </div>
 
         <div class="contarParrafos">
-            <h2>Contar párrafos, enlaces y encabezados.</h2>
-            <button class="waves-effect btn-small boton-contar">Contar</button>
+            <h2 tabindex="0">Contar párrafos, enlaces y encabezados.</h2>
+            <button aria-label="Contar" class="waves-effect btn-small boton-contar">Contar</button>
+            <div tabindex="-1" class="resultado3">
+            </div>
         </div>
     </div>
 

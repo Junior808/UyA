@@ -14,7 +14,7 @@ const usuarioA = {
     nacimiento: new Date(1982, 07, 06), // "6/07/1982",
     fIngreso: new Date(2012, 05, 15), // "15/05/2012",
     plusProductividad: 0.1,
-    productividadbruto: function () {
+    productividadbruto: function() {
         let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
         b = (b / 3); // los años trabajados los divido entre tres
         b = Math.trunc(b); // me quedo con la parte entera
@@ -29,7 +29,7 @@ const usuarioB = {
     nacimiento: new Date(1964, 02, 29),
     fIngreso: new Date(2008, 03, 20),
     plusProductividad: 0.1,
-    productividadbruto: function () {
+    productividadbruto: function() {
         let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
         b = (b / 3); // los años trabajados los divido entre tres
         b = Math.trunc(b); // me quedo con la parte entera
@@ -44,7 +44,7 @@ const usuarioC = {
     nacimiento: new Date(1977, 10, 05),
     fIngreso: new Date(2001, 04, 16),
     plusProductividad: 0.1,
-    productividadbruto: function () {
+    productividadbruto: function() {
         let b = hoy.getFullYear() - this.fIngreso.getFullYear(); // calculo los años que lleva trabajados
         b = (b / 3); // los años trabajados los divido entre tres
         b = Math.trunc(b); // me quedo con la parte entera
@@ -79,11 +79,11 @@ const boton_edad = document.querySelector(".boton-edad");
 
 boton_edad.onclick = () => {
 
-    const p = document.createElement("p");
+    const p = document.querySelector(".resultado2");
     const usuario_aleatorio = random_item(usuarios);
     const mostrar = calcular(usuario_aleatorio);
 
+    p.setAttribute("tabindex", "0");
     p.textContent = `Usuario ${usuario_aleatorio.dni} de edad ${mostrar[0]} y con sueldo ${mostrar[1]}.`;
-
-    texto.replaceChild(p, texto.childNodes[2]);
+    // texto.replaceChild(p, texto.childNodes[2]);
 }

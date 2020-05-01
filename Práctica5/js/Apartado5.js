@@ -22,8 +22,8 @@ const boton_contar = document.querySelector(".boton-contar");
 
 boton_contar.onclick = () => {
 
-    const p = document.createElement("p");
-
+    const p = document.querySelector(".resultado3");
+    p.setAttribute("tabindex", "0");
     p.textContent = contar();
-    texto_contar.replaceChild(p, texto_contar.childNodes[2]);
+    // texto_contar.replaceChild(p, texto_contar.childNodes[2]);
 }

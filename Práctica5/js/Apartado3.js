@@ -8,8 +8,9 @@ boton.onclick = () => {
     const divisa2 = document.querySelector(".divisa-2").value;
     const monto = document.querySelector(".monto").value;
 
-    const texto = document.querySelector(".resultado");
+    const texto = document.querySelector(".resultado1");
     const p = document.createElement("p");
+    texto.setAttribute("tabindex", "0");
 
     if (divisa1 === divisa2) {
         p.textContent = monto;
@@ -19,5 +20,3 @@ boton.onclick = () => {
     }
     texto.replaceChild(p, texto.childNodes[0]);
 }
-
-

@@ -9,7 +9,10 @@ $(document).ready(function() {
                 for (const i in response) {
                     let p = $("<p></p>");
                     p.text(`${response[i].name}: ${response[i].body}`);
+                    p.setA
                     $(".container").append(p);
+                    const container = document.querySelector(".container");
+                    container.setAttribute("tabindex", "0");
                 }
             },
         });

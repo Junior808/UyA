@@ -16,12 +16,12 @@
 
 <body>
     <form class="formulario" action="">
-        <p>Id: <input type="number" id="id"></p>
+        <p tabindex="0">Id: <input type="number" id="id" aria-required=”true”></p>
     </form>
 
-    <button class="boton">¡Púlsame!</button>
+    <button class="boton" role="button">¡Púlsame!</button>
 
-    <div class="container"></div>
+    <div tabindex="-1" class="container"></div>
     <script type="text/javascript" src="js/index.js"></script>
 
 </body>

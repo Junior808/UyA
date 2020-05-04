@@ -1,10 +1,12 @@
 # UyA
+
 ## Prácticas de Usabilidad y Accesibilidad
 
 ### Grupo 14 del martes.
-- Damián E. Domínguez De Barros
-- Bárbara V. García Deus
-- Laura Cañizares Herrera.
+
+-   Damián E. Domínguez De Barros
+-   Bárbara V. García Deus
+-   Laura Cañizares Herrera.
 
 ---
 
@@ -23,3 +25,5 @@
 [Práctica 7: Introducción a Firebase I](Práctica7/)
 
 [Práctica 7: Introducción a Firebase I - Informe](Práctica7-1/)
+
+[Práctica 8: WAI-ARIA](Práctica8/)

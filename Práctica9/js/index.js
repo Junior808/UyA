@@ -76,7 +76,6 @@ izquierda.onclick = () => {
 };
 
 derecha.onclick = () => {
-    console.log("Holi");
     let current = instances[0].el.querySelector(".active");
     current.setAttribute("tabindex", "-1");
     current.setAttribute("aria-hidden", "true");

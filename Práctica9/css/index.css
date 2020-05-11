@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
+}
+
+.container,
+.acordeon {
+    margin-top: 5%;
+}
+
+#migas {
+    background-color: palevioletred;
+}

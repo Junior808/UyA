@@ -1,0 +1,17 @@
+h1 {
+    color: #ee6e73
+}
+
+.sidenav li:hover {
+    background-color: #ee6e73;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-signup {
+    margin: 2em;
+}

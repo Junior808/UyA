@@ -15,3 +15,18 @@ h1 {
 .container-signup {
     margin: 2em;
 }
+
+.profile-picture {
+    height: 10em;
+    width: 10em;
+}
+
+.card-image {
+    width: 8em;
+    border-radius: 25%;
+    /*no el radius funciona no sé por qué*/
+}
+
+.container-tiempo {
+    margin: 6em;
+}

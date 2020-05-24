@@ -1,0 +1,2 @@
+:root{--first:#537fa6;--second:#789ebf;--third:#6d7e8c;--fourth:#fcf9f2;--fifth:#750015}body{color:var(--first)}.flex{display:flex;justify-content:center;align-items:center}.page-footer,nav{background-color:var(--second)}.sidenav{background-color:var(--fourth)}.sidenav li:hover{background-color:var(--third)}.sidenav li a:hover{color:#fff}.card-content{flex-direction:column;align-items:flex-start;text-align:justify;color:#000}.card-image{width:100%;height:auto}.infoFooter{font-size:200%}
+/*# sourceMappingURL=/UyA/css.094eb930.css.map */

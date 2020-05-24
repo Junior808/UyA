@@ -1,9 +1,13 @@
-h1 {
-    color: #ee6e73
+:root {
+    --first: #537fa6;
+    --second: #789ebf;
+    --third: #6d7e8c;
+    --fourth: #fcf9f2;
+    --fifth: #750015;
 }
 
-.sidenav li:hover {
-    background-color: #ee6e73;
+body {
+    color: var(--first);
 }
 
 .flex {
@@ -12,6 +16,43 @@ h1 {
     align-items: center;
 }
 
+nav,
+.page-footer {
+    background-color: var(--second);
+}
+
+.sidenav {
+    background-color: var(--fourth);
+}
+
+.sidenav li:hover {
+    background-color: var(--third);
+}
+
+.sidenav li a:hover {
+    color: white;
+}
+
+.card-content {
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: justify;
+
+    color: black;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.infoFooter {
+    font-size: 200%;
+}
+
+/* Otras páginas */
+
 .container-signup {
     margin: 2em;
 }
@@ -19,12 +60,6 @@ h1 {
 .profile-picture {
     height: 10em;
     width: 10em;
-}
-
-.card-image {
-    width: 8em;
-    border-radius: 25%;
-    /*no el radius funciona no sé por qué*/
 }
 
 .container-tiempo {

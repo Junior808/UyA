@@ -50,18 +50,3 @@ nav,
 .infoFooter {
     font-size: 200%;
 }
-
-/* Otras páginas */
-
-.container-signup {
-    margin: 2em;
-}
-
-.profile-picture {
-    height: 10em;
-    width: 10em;
-}
-
-.container-tiempo {
-    margin: 6em;
-}

@@ -30,4 +30,4 @@
 
 [Práctica 9: WAI-ARIA Materialize](Práctica9/)
 
-[Práctica 10: Diseño responsive](Práctica8/)
+[Práctica 10: Diseño responsive](Práctica10/)

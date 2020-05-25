@@ -58,12 +58,12 @@ h1 {
 
 /* Otras páginas */
 
-.container-signup {
-    margin: 2em;
+.btn {
+    background-color: var(--first);
 }
 
-#btnSignUp {
-    background-color: var(--second);
+.container-signup {
+    margin: 2em;
 }
 
 .profile-picture {

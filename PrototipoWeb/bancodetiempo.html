@@ -39,7 +39,7 @@
         <li><a href="bancodetiempo.html">Banco de tiempo</a></li>
     </ul>
 
-    <h1>Banco de tiempo</h1>
+    <h1 tabindex="0">Banco de tiempo</h1>
 
     <div class="container-tiempo">
         <div class="row">
@@ -52,18 +52,19 @@
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Título: </p>
-                            <p>breve descripción</p>
+                            <p tabindex="0">Título: </p>
+                            <p tabindex="0">breve descripción</p>
                             <!-- en esta tarjeta lo q quiero es poner cada una d las "ofertas" 
                                 que hayan en el banco, entonces podemos poner el titulo y una
                                 breve descripción y no sé si un enlace al perfil del usuario 
                                 que se ofrece u otra cosa -->
                         </div>
                     </div>
-                    <div class="card-image">
+                    <div tabindex="0" class="card-image">
                         <!-- en esta parte podemos poner una foto de acuerdo a si se tratan de apuntes en 
                         pdf o de un vídeo explicativo, o cualquier otra cosa -->
-                        <img src="./assets/apuntes.webp">
+                        <img src="./assets/apuntes.webp" alt="Foto de apuntes">
+                        <div style="visibility: hidden">Foto de apuntes</div>
                     </div>
                 </div>
             </div>
@@ -71,12 +72,13 @@
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Título: </p>
-                            <p>breve descripción</p>
+                            <p tabindex="0">Título: </p>
+                            <p tabindex="0">breve descripción</p>
                         </div>
                     </div>
-                    <div class="card-image">
-                        <img src="./assets/video.png">
+                    <div tabindex="0" class="card-image">
+                        <img src="./assets/video.png" alt="Video">
+                        <div style="visibility: hidden">Video</div>
                     </div>
                 </div>
             </div>
@@ -86,8 +88,8 @@
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Título: </p>
-                            <p>breve descripción</p>
+                            <p >Título: </p>
+                            <p >breve descripción</p>
                         </div>
                     </div>
                     <div class="card-image"></div>
@@ -97,8 +99,8 @@
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Título: </p>
-                            <p>breve descripción</p>
+                            <p >Título: </p>
+                            <p >breve descripción</p>
                         </div>
                     </div>
                     <div class="card-image"></div>
@@ -137,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l4 s12">
-                    <p class="infoFooter">Más información</p>
+                    <p tabindex="0" class="infoFooter">Más información</p>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="team.html">Equipo</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Contacta con nosotros</a></li>
@@ -146,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div tabindex="0" class="footer-copyright">
             <p class="container">© 2020 Copyright</p>
         </div>
     </footer>

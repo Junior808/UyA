@@ -2,14 +2,14 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/index.js"></script>
@@ -27,7 +27,7 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Inicio</a></li>
-                <li class="active"><a href="signup.html">Registrarse</a></li>
+                <li><a href="signup.html">Registrarse</a></li>
                 <li><a href="bancodetiempo.html">Banco de tiempo</a></li>
             </ul>
         </div>
@@ -39,47 +39,56 @@
         <li><a href="bancodetiempo.html">Banco de tiempo</a></li>
     </ul>
 
-    <div class="container-signup flex">
+    <h1>Subir tu documento</h1>
+
+    <div class="container-uploaddoc">
         <div class="row">
-            <form class="col s12" id="reg-form">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate" required />
-                        <label for="first_name">First Name</label>
+            <div class="input-field col s12 l6">
+                <input id="email" type="email" class="validate" required />
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12 l6">
+                <input id="password" type="password" class="validate" minlength="6" required />
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 l6">
+                <input id="title_doc" type="text" class="validate" required />
+                <label for="title_doc">Título del documento</label>
+            </div>
+            <div class="input-field col s6 l6">
+                <input id="hours" type="number" class="validate" required />
+                <label for="hours">Horas invertidas</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 l12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Descripción</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col s12 l6">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Subir documento</span>
+                        <input type="file" required />
                     </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" required />
-                        <label for="last_name">Last Name</label>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" required />
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" minlength="6" required />
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-
-                <!-- Podemos poner edad, si es profesor o estudiante, 
-                si es profesor que salga si es de infantil, primaria, etc
-                y si es estudiante, que salga de q curso es o si es de la eso, bach, universidad o ciclo o lo que sea -->
-
-                <div class="row flex">
-                    <div class="input-field col s6">
-                        <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">
-                            Register
-                            <i class="material-icons right">done</i>
-                        </button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <div class="container col s12 l6 flex">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+            </div>
         </div>
     </div>
+
+
 
     <footer class="page-footer">
         <div class="container">

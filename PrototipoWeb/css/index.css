@@ -1,6 +1,8 @@
 :root {
-    --first: #537fa6;
-    --second: #789ebf;
+    /* --first: #537fa6; */
+    --first: #0C1E2D;
+    /* --second: #789ebf; */
+    --second: #29455F;
     --third: #6d7e8c;
     --fourth: #fcf9f2;
     --fifth: #750015;
@@ -58,6 +60,10 @@ h1 {
 
 .container-signup {
     margin: 2em;
+}
+
+#btnSignUp {
+    background-color: var(--second);
 }
 
 .profile-picture {

@@ -19,9 +19,9 @@ const database = firebase.database();
 
 const btnSignUp = document.querySelector("#btnSignUp");
 
-let nombre = document.getElementById("first_name").value;
-let apellido = document.getElementById("last_name").value;
-let email = document.getElementById("email").value;
+// let nombre = document.getElementById("first_name").value;
+// let apellido = document.getElementById("last_name").value;
+// let email = document.getElementById("email").value;
 
 // function submit() {
 //     usuariosBdT = database.ref("usuarios/pruebaBdT/");
@@ -36,12 +36,12 @@ let email = document.getElementById("email").value;
 // }
 
 btnSignUp.onclick = () => {
+    let nombre = document.getElementById("first_name").value;
+    let apellido = document.getElementById("last_name").value;
+    let email = document.getElementById("email").value;
     usuariosBdT = database.ref("usuarios/pruebaBdT/");
 
     alert(nombre);
-    console.log(nombre);
-    console.log(apellido);
-    console.log(email);
 
     usuariosBdT.set({
         nombre: nombre,

@@ -68,6 +68,15 @@ h1 {
 
 .container-signup {
     margin: 2em;
+    flex-direction: column;
+}
+
+.signup-error {
+    color: var(--fifth);
+}
+
+.error-msg {
+    color: var(--fifth);
 }
 
 .profile-picture {

@@ -42,28 +42,33 @@
     <h1 tabindex="0">Registro</h1>
 
     <div class="container-signup flex">
+        <div class="section signup-error"></div>
         <div class="row">
             <form class="col s12" id="reg-form">
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="first_name" type="text" class="validate" required />
                         <label for="first_name">Nombre</label>
+                        <div class="error-msg first_name-error"></div>
                     </div>
                     <div class="input-field col s6">
                         <input id="last_name" type="text" class="validate" required />
                         <label for="last_name">Apellidos</label>
+                        <div class="error-msg last_name-error"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate" required />
                         <label for="email">Email</label>
+                        <div class="error-msg email-error"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="password" type="password" class="validate" minlength="6" required />
                         <label for="password">Contraseña</label>
+                        <div class="error-msg password-error"></div>
                     </div>
                 </div>
 

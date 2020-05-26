@@ -14,20 +14,38 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 const database = firebase.database();
 
+//Registro
 const btnSignUp = document.querySelector("#btnSignUp");
-
 btnSignUp.onclick = () => {
     let nombre = document.getElementById("first_name").value;
     let apellido = document.getElementById("last_name").value;
     let email = document.getElementById("email").value;
     usuariosBdT = database.ref("usuariosBdT");
+    const correosExistentes = [];
 
-    usuariosBdT.push().set({
-        nombre: nombre,
-        apellidos: apellido,
-        correo: email,
+    usuariosBdT.on("value", (snapshot) => {
+        const usuarios = snapshot.val();
+
+        for (const i in usuarios) {
+            console.log(`${i}`, usuarios[i]);
+            correosExistentes.push(usuarios[i].correo);
+        }
     });
+
+    console.log(correosExistentes);
+
+    if (correosExistentes.includes(email)) {
+        //No validar, el correo está pillado
+        console.log("Nope");
+    } else {
+        usuariosBdT.push().set({
+            nombre: nombre,
+            apellidos: apellido,
+            correo: email,
+        });
+        // window.location.href = "bancodetiempo.html";
+    }
 };
+//!Registro

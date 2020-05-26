@@ -1,8 +1,8 @@
 :root {
     /* --first: #537fa6; */
-    --first: #0C1E2D;
+    --first: #0c1e2d;
     /* --second: #789ebf; */
-    --second: #29455F;
+    --second: #29455f;
     --third: #6d7e8c;
     --fourth: #fcf9f2;
     --fifth: #750015;
@@ -28,7 +28,7 @@ nav,
 }
 
 .sidenav li:hover {
-    background-color: var(--third);
+    background-color: var(--second);
 }
 
 .sidenav li a:hover {
@@ -54,7 +54,6 @@ nav,
 h1 {
     margin: 1em;
 }
-
 
 /* Otras páginas */
 

@@ -10,22 +10,35 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 const database = firebase.database();
 
 const btnSignUp = document.querySelector("#btnSignUp");
 
-let nombre = document.querySelector("#first_name");
-let apellido = document.querySelector("#last_name");
-let email = document.querySelector("#email");
+let nombre = document.getElementById("first_name").value;
+let apellido = document.getElementById("last_name").value;
+let email = document.getElementById("email").value;
 
-btnSignUp.onclick = () => {
+function summit() {
     usuariosBdT = database.ref("usuarios/pruebaBdT/");
 
-    usuariosBdT.set({
-        nombre: nombre,
-        apellidos: apellido,
-        correo: email,
-    });
-};
+    alert(nombre);
+
+    // usuariosBdT.set({
+    //     nombre: nombre,
+    //     apellidos: apellido,
+    //     correo: email,
+    // });
+}
+
+// btnSignUp.onclick = () => {
+//     usuariosBdT = database.ref("usuarios/pruebaBdT/");
+
+//     alert(nombre);
+
+//     // usuariosBdT.set({
+//     //     nombre: nombre,
+//     //     apellidos: apellido,
+//     //     correo: email,
+//     // });
+// };

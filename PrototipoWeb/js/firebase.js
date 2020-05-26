@@ -1,3 +1,7 @@
+// import { firebase } from 'firebase/app';
+// import 'firebase/auth';
+// import 'firebase/firestore';
+
 var firebaseConfig = {
     apiKey: "AIzaSyAYC2xOKqPvMKbQWxXxiQHpW3HbbDdCou0",
     authDomain: "introfirebase-e7ca2.firebaseapp.com",
@@ -19,19 +23,7 @@ let nombre = document.getElementById("first_name").value;
 let apellido = document.getElementById("last_name").value;
 let email = document.getElementById("email").value;
 
-function summit() {
-    usuariosBdT = database.ref("usuarios/pruebaBdT/");
-
-    alert(nombre);
-
-    // usuariosBdT.set({
-    //     nombre: nombre,
-    //     apellidos: apellido,
-    //     correo: email,
-    // });
-}
-
-// btnSignUp.onclick = () => {
+// function submit() {
 //     usuariosBdT = database.ref("usuarios/pruebaBdT/");
 
 //     alert(nombre);
@@ -41,4 +33,19 @@ function summit() {
 //     //     apellidos: apellido,
 //     //     correo: email,
 //     // });
-// };
+// }
+
+btnSignUp.onclick = () => {
+    usuariosBdT = database.ref("usuarios/pruebaBdT/");
+
+    alert(nombre);
+    console.log(nombre);
+    console.log(apellido);
+    console.log(email);
+
+    usuariosBdT.set({
+        nombre: nombre,
+        apellidos: apellido,
+        correo: email,
+    });
+};

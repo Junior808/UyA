@@ -55,10 +55,15 @@ h1 {
     margin: 1em;
 }
 
+
 /* Otras páginas */
 
 .btn {
     background-color: var(--first);
+}
+
+.btn:hover {
+    background-color: var(--third);
 }
 
 .container-signup {
@@ -71,30 +76,36 @@ h1 {
 }
 
 .container-tiempo {
-    margin: 6em;
-}
-
-.btn-uploaddoc {
-    background-color: var(--first);
-}
-
-.btn-uploaddoc:hover {
-    background-color: var(--third);
+    margin: 2em;
 }
 
 .container-uploaddoc {
-    margin: 8em;
+    margin: 2em;
+}
+
+.container-equipo {
+    margin: 2em;
 }
 
 .container-equipo .card {
     width: 15em;
-    margin: 2em;
+    border: 1em solid white;
+    flex-direction: column;
+}
+
+.container-equipo .card .card-image {
+    width: 15em;
 }
 
 .container-contact {
-    margin: 8em;
+    margin: 2em;
 }
 
 .container-privacity {
-    margin: 8em;
+    margin: 2em;
 }
+
+
+/* .card-profile {
+    box-shadow: 2px 2px 2px #000;
+} */

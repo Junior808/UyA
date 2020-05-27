@@ -34,32 +34,71 @@ btnSignUp.onclick = () => {
         if (apellido === "") apellidoError.textContent = `Debe incluir un apellido`;
         if (email === "") emailError.textContent = `Ejemplo: sunombre@gmail.com`;
     } else {
-        usuariosBdT = database.ref("usuariosBdT");
+        usuariosBdT = database.ref(`usuariosBdT`);
         const correosExistentes = [];
 
-        usuariosBdT.once('value', (snapshot) => {
+        usuariosBdT.push().set({
+            nombre: nombre,
+            apellidos: apellido,
+            correo: email,
+        });
+
+        // console.log(ayuda.child("usuariosBdT").orderByKey());
+
+        // const ayuda = database.ref(`introfirebase-e7ca2`);
+        // let delref = ayuda.child("usuariosBdT").orderByKey().limitToLast(1);
+        // console.log(delref);
+
+        let delref;
+        getLastFromList(usuariosBdT);
+
+        function getLastFromList(ref) {
+            ref.once("child_added", function(snapshot) {
+                delref = snapshot.val();
+            });
+        }
+        console.log(delref);
+        alert("STOP");
+
+        let flag = false;
+        usuariosBdT.on('value', (snapshot) => {
             const usuarios = snapshot.val();
             for (const i in usuarios) {
                 correosExistentes.push(usuarios[i].correo);
+                console.log(usuarios[i].correo);
             }
-
-            if (correosExistentes.includes(email)) {
-                alerta.textContent = "El correo electrónico introducido ya existe.";
-            } else {
-                usuariosBdT.push().set({
-                    nombre: nombre,
-                    apellidos: apellido,
-                    correo: email,
-                });
-                // window.location.href = "bancodetiempo.html";
+            console.log(correosExistentes);
+            for (let i = 0; i < correosExistentes.length; i++) {
+                if ((flag == false) && (correosExistentes[i] == email)) {
+                    flag = true;
+                    correosExistentes.splice(i, 1);
+                } else if ((flag == true) && (correosExistentes[i] == email)) {
+                    alerta.textContent = "El correo electrónico introducido ya existe.";
+                    console.log(delref);
+                    delref.remove();
+                    i = correosExistentes.length;
+                    alert("aqui");
+                }
             }
+            console.log(correosExistentes);
         })
+
+
+
+        // if (correosExistentes.includes(email)) {
+        //     alert("nanain");
+        //     alerta.textContent = "El correo electrónico introducido ya existe.";
+        // } else {
+        //     usuariosBdT.push().set({
+        //         nombre: nombre,
+        //         apellidos: apellido,
+        //         correo: email,
+        //     });
+        //     // window.location.href = "bancodetiempo.html";
+        // }
 
 
     }
 
 };
 //!Registro
-
-
-// Comprobar que no están vacíos los campos.

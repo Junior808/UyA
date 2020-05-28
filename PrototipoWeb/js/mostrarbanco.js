@@ -15,17 +15,29 @@ banco = database.ref(`ofertasBdT`);
 
 const element = document.querySelector(".elements");
 
-banco.once('value', (snapshot) => {
+banco.once("value", (snapshot) => {
     const ofertas = snapshot.val();
     console.log(ofertas);
+
+    let numberId = 1;
     for (const i in ofertas) {
+        const contenedor = document.createElement("div");
+        contenedor.classList.add("col", "s12", "l6");
+
+        const cardHorizontal = document.createElement("div");
+        cardHorizontal.classList.add("card", "horizontal");
+
         const oferta = document.createElement("div");
-        oferta.classList.add("col");
-        oferta.classList.add("s12");
+        oferta.classList.add("card-stacked");
+        oferta.setAttribute("id", `elem${numberId}`);
+
         oferta.innerHTML = `
         <p tabindex="0">Título: ${ofertas[i].title}</p>
         <p tabindex="0">${ofertas[i].description}</p>
         <p tabindex="0">Contacto: ${ofertas[i].email}</p>`;
-        element.appendChild(oferta);
+        cardHorizontal.appendChild(oferta);
+        contenedor.appendChild(cardHorizontal);
+        element.appendChild(contenedor);
+        numberId++;
     }
-})
+});

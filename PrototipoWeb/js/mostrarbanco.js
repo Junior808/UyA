@@ -34,7 +34,8 @@ banco.once("value", (snapshot) => {
         oferta.innerHTML = `
         <p tabindex="0">Título: ${ofertas[i].title}</p>
         <p tabindex="0">${ofertas[i].description}</p>
-        <p tabindex="0">Contacto: ${ofertas[i].email}</p>`;
+        <p tabindex="0">Contacto: ${ofertas[i].email}</p>
+        <a href=${ofertas[i].url}>Documento</a>`;
         cardHorizontal.appendChild(oferta);
         contenedor.appendChild(cardHorizontal);
         element.appendChild(contenedor);

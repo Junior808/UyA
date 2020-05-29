@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 let selectedFile;
 
-$("#file").on("change", function (event) {
+$("#file").on("change", function(event) {
     selectedFile = event.target.files[0];
 });
 
@@ -28,7 +28,7 @@ function uploadFile() {
 
     uploadTask.on(
         "state_changed",
-        function (snapshot) {
+        function(snapshot) {
             // Observe state change events such as progress, pause, and resume
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
             var progress =
@@ -43,15 +43,15 @@ function uploadFile() {
                     break;
             }
         },
-        function (error) {
+        function(error) {
             // Handle unsuccessful uploads
         },
-        function () {
+        function() {
             // Handle successful uploads on complete
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             uploadTask.snapshot.ref
                 .getDownloadURL()
-                .then(function (downloadURL) {
+                .then(function(downloadURL) {
                     let url = downloadURL;
                     // console.log("File available at", downloadURL);
                 });
@@ -74,7 +74,7 @@ btnUploadDoc.onclick = () => {
 
     uploadTask.on(
         "state_changed",
-        function (snapshot) {
+        function(snapshot) {
             // Observe state change events such as progress, pause, and resume
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
             var progress =
@@ -89,35 +89,43 @@ btnUploadDoc.onclick = () => {
                     break;
             }
         },
-        function (error) {
+        function(error) {
             // Handle unsuccessful uploads
         },
-        function () {
+        function() {
             // Handle successful uploads on complete
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             uploadTask.snapshot.ref
                 .getDownloadURL()
-                .then(function (downloadURL) {
+                .then(function(downloadURL) {
                     let url = downloadURL;
                     console.log("URL", url);
 
                     //Enviar todo.
-                    let email = document.getElementById("email").value;
-                    // let emailError = document.querySelector(".email-error");
-                    let title = document.getElementById("title_doc").value;
-                    let hours = document.getElementById("hours").value;
-                    let description = document.getElementById("textarea1")
-                        .value;
+                    // let email = document.getElementById("email").value;
+                    let email = localStorage.getItem("email");
+                    console.log(email);
+                    if ((email === ' ') || (email === null)) {
+                        alert("No ha iniciado sesión. Se le redirigirá a 'Iniciar Sesión'");
+                        window.location.href = "login.html";
+                    } else {
+                        // let emailError = document.querySelector(".email-error");
+                        let title = document.getElementById("title_doc").value;
+                        let hours = document.getElementById("hours").value;
+                        let description = document.getElementById("textarea1")
+                            .value;
 
-                    banco = database.ref(`ofertasBdT`);
+                        banco = database.ref(`ofertasBdT`);
 
-                    banco.push().set({
-                        title: title,
-                        hours: hours,
-                        description: description,
-                        email: email,
-                        url: url,
-                    });
+                        banco.push().set({
+                            title: title,
+                            hours: hours,
+                            description: description,
+                            email: email,
+                            url: url,
+                        });
+                        window.location.href = "bancodetiempo.html"
+                    }
                     // console.log("File available at", downloadURL);
                 });
         }

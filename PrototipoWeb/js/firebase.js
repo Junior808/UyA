@@ -1,7 +1,3 @@
-// import { firebase } from 'firebase/app';
-// import 'firebase/auth';
-// import 'firebase/firestore';
-
 var firebaseConfig = {
     apiKey: "AIzaSyAYC2xOKqPvMKbQWxXxiQHpW3HbbDdCou0",
     authDomain: "introfirebase-e7ca2.firebaseapp.com",

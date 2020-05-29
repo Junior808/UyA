@@ -88,6 +88,38 @@ h1 {
     margin: 2em;
 }
 
+.container-tiempo .card-stacked {
+    padding: 2em;
+}
+
+.container-tiempo .card-stacked .title {
+    font-weight: bold;
+    color: var(--first);
+}
+
+.container-tiempo .card-stacked .description {
+    color: var(--second);
+}
+
+.container-tiempo .card-stacked .contacto {
+    font-weight: bold;
+    color: var(--second);
+}
+
+.container-tiempo .card-stacked .doc {
+    border: 2px solid var(--first);
+    border-radius: 25%;
+    font-weight: bold;
+    color: var(--first);
+    text-align: center;
+    background-color: var(--third);
+}
+
+.container-tiempo .card-stacked .doc:hover {
+    font-weight: bold;
+    text-decoration: underline var(--second);
+}
+
 .container-uploaddoc {
     margin: 2em;
 }

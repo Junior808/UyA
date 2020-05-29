@@ -31,11 +31,31 @@ banco.once("value", (snapshot) => {
         oferta.classList.add("card-stacked");
         oferta.setAttribute("id", `elem${numberId}`);
 
-        oferta.innerHTML = `
-        <p tabindex="0">Título: ${ofertas[i].title}</p>
-        <p tabindex="0">${ofertas[i].description}</p>
-        <p tabindex="0">Contacto: ${ofertas[i].email}</p>
-        <a href=${ofertas[i].url}>Documento</a>`;
+        const title = document.createElement("div");
+        title.classList.add("title");
+        title.textContent = `Título: ${ofertas[i].title}`
+        oferta.appendChild(title);
+
+        const description = document.createElement("div");
+        description.classList.add("description");
+        description.textContent = `${ofertas[i].description}`
+        oferta.appendChild(description);
+
+        const contacto = document.createElement("div");
+        contacto.classList.add("contacto");
+        contacto.textContent = `Contacto: ${ofertas[i].email}`
+        oferta.appendChild(contacto);
+
+        const doc = document.createElement("a");
+        doc.classList.add("doc");
+        doc.setAttribute("href", `${ofertas[i].url}`);
+        doc.textContent = "Acceder al documento";
+        oferta.appendChild(doc);
+
+        // <p tabindex="0">Título: ${ofertas[i].title}</p>
+        // <p tabindex="0">${ofertas[i].description}</p>
+        // oferta.innerHTML += `
+        // <a href=${ofertas[i].url}>Documento</a>`;
         cardHorizontal.appendChild(oferta);
         contenedor.appendChild(cardHorizontal);
         element.appendChild(contenedor);

@@ -65,6 +65,8 @@ h1 {
 
 .container-profile {
     margin: 2em;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .btn {

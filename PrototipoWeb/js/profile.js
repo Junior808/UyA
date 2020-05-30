@@ -15,14 +15,14 @@ referenciaUsuarios = database.ref(`usuariosBdT`);
 
 document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("email")) {
-        const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
+        // const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
 
         // for (const i in navsInicioSesion) {
         //     navsInicioSesion[i].setAttribute("href", "profile.html");
         //     navsInicioSesion[i].textContent = "Tu perfil";
         // }
 
-        const divInfoPerfil = document.querySelector(".infoPerfil");
+        const divInfoPerfil = document.querySelector(".profile-info");
 
         referenciaUsuarios.once("value", (snapshot) => {
             const usuariosBdT = snapshot.val();
@@ -31,13 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (usuariosBdT[i].correo === localStorage.getItem("email")) {
                     const nombre = document.createElement("p");
                     nombre.classList.add("nombre");
-                    nombre.textContent = `Nombre: ${usuariosBdT[i].nombre}`;
+                    nombre.textContent = `${usuariosBdT[i].nombre} ${usuariosBdT[i].apellidos}`;
                     divInfoPerfil.appendChild(nombre);
-
-                    const apellidos = document.createElement("p");
-                    apellidos.classList.add("apellidos");
-                    apellidos.textContent = `Apellidos: ${usuariosBdT[i].apellidos}`;
-                    divInfoPerfil.appendChild(apellidos);
 
                     const horas = document.createElement("p");
                     horas.classList.add("horas");

@@ -16,7 +16,7 @@ const database = firebase.database();
 usuariosBdT = database.ref(`usuariosBdT`);
 const correosExistentes = [];
 
-usuariosBdT.on('value', (snapshot) => {
+usuariosBdT.on("value", (snapshot) => {
     const usuarios = snapshot.val();
     for (const i in usuarios) {
         correosExistentes.push(usuarios[i].correo);
@@ -28,13 +28,19 @@ usuariosBdT.on('value', (snapshot) => {
 const btnSignIn = document.querySelector("#btnSignIn");
 
 btnSignIn.onclick = () => {
-    let email = document.getElementById("email").value;
-    localStorage.setItem("email", email);
     if (correosExistentes.includes(email)) {
-        alert("Se le redirigirá a nuestro banco de tiempo.");
+        if (!localStorage.getItem("email")) {
+            let email = document.getElementById("email").value;
+            localStorage.setItem("email", email);
+        }
+        // alert("Se le redirigirá a nuestro banco de tiempo.");
         window.location.href = "bancodetiempo.html";
     } else {
-        alert("El usuario no se encuentra registrado. Se le redirigirá a 'Registrarse'");
-        window.location.href = "signup.html";
+        const mensajeError = document.querySelector(".email-error");
+        mensajeError.textContent = "El email o la contraseña no son correctos.";
+        // alert(
+        //     "El usuario no se encuentra registrado. Se le redirigirá a 'Registrarse'"
+        // );
+        // window.location.href = "signup.html";
     }
-}
+};

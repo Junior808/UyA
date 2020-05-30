@@ -55,7 +55,6 @@ h1 {
     margin: 1em;
 }
 
-
 /* Otras páginas */
 
 .btn {
@@ -106,14 +105,14 @@ h1 {
     color: var(--second);
 }
 
-.container-tiempo .card-stacked .doc {
+/* .container-tiempo .card-stacked .doc {
     border: 2px solid var(--first);
     border-radius: 25%;
     font-weight: bold;
     color: var(--first);
     text-align: center;
     background-color: var(--third);
-}
+} */
 
 .container-tiempo .card-stacked .doc:hover {
     font-weight: bold;
@@ -145,7 +144,6 @@ h1 {
 .container-privacity {
     margin: 2em;
 }
-
 
 /* .card-profile {
     box-shadow: 2px 2px 2px #000;

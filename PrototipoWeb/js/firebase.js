@@ -16,7 +16,7 @@ const database = firebase.database();
 usuariosBdT = database.ref(`usuariosBdT`);
 const correosExistentes = [];
 
-usuariosBdT.on('value', (snapshot) => {
+usuariosBdT.on("value", (snapshot) => {
     const usuarios = snapshot.val();
     for (const i in usuarios) {
         correosExistentes.push(usuarios[i].correo);
@@ -37,15 +37,18 @@ btnSignUp.onclick = () => {
 
     const alerta = document.querySelector(".signup-error");
     // comprobar que no esté en blanco
-    if ((nombre === "") || (apellido === "") || (email === "")) {
+    if (nombre === "" || apellido === "" || email === "") {
         alerta.textContent = `No pueden incluirse campos vacíos.`;
         if (nombre === "") nombreError.textContent = `Debe incluir un nombre`;
-        if (apellido === "") apellidoError.textContent = `Debe incluir un apellido`;
-        if (email === "") emailError.textContent = `Ejemplo: sunombre@gmail.com`;
+        if (apellido === "")
+            apellidoError.textContent = `Debe incluir un apellido`;
+        if (email === "")
+            emailError.textContent = `Ejemplo: sunombre@gmail.com`;
     } else {
         if (correosExistentes.includes(email)) {
             alert("El correo electrónico introducido ya existe.");
         } else {
+            localStorage.setItem("email", email);
             usuariosBdT.push().set({
                 nombre: nombre,
                 apellidos: apellido,
@@ -54,6 +57,5 @@ btnSignUp.onclick = () => {
             window.location.href = "bancodetiempo.html";
         }
     }
-
 };
 //!Registro

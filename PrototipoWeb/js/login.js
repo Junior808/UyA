@@ -28,11 +28,9 @@ usuariosBdT.on("value", (snapshot) => {
 const btnSignIn = document.querySelector("#btnSignIn");
 
 btnSignIn.onclick = () => {
+    let email = document.getElementById("email").value;
     if (correosExistentes.includes(email)) {
-        if (!localStorage.getItem("email")) {
-            let email = document.getElementById("email").value;
-            localStorage.setItem("email", email);
-        }
+        localStorage.setItem("email", email);
         // alert("Se le redirigirá a nuestro banco de tiempo.");
         window.location.href = "bancodetiempo.html";
     } else {

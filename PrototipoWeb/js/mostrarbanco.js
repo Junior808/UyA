@@ -50,6 +50,7 @@ banco.once("value", (snapshot) => {
         doc.classList.add("btn");
         doc.setAttribute("href", `${ofertas[i].url}`);
         doc.textContent = "Acceder al documento";
+        doc.addEventListener("click", clickDocumento(ofertas[i].hours));
         oferta.appendChild(doc);
 
         // <p tabindex="0">Título: ${ofertas[i].title}</p>
@@ -62,3 +63,39 @@ banco.once("value", (snapshot) => {
         numberId++;
     }
 });
+
+function clickDocumento(tiempo) {
+    let email = localStorage.getItem("email");
+    let hoursInt = parseInt(tiempo, 10); // pasar a entero en base 10
+
+    referenciaUsuarios = database.ref(`usuariosBdT`);
+    let actualizar;
+
+    referenciaUsuarios.once("value", (snap) => {
+        const usuariosBdT = snap.val();
+        // console.log("Entra");
+        // console.log(snap.val());
+
+        for (const i in usuariosBdT) {
+            if (usuariosBdT[i].correo === email) {
+                actualizar = database.ref(`usuariosBdT/${i}`);
+            }
+        }
+        let horasActuales;
+        actualizar.once("value", (spshot) => {
+            // console.log("LOG", spshot.val());
+            horasActuales = spshot.val().horas;
+            // console.log(horasActuales);
+            horasActualesInt = parseInt(horasActuales, 10);
+            horasActualesInt -= hoursInt;
+            horasActuales = horasActualesInt.toString(10);
+
+            // console.log(horasActuales);
+            actualizar.update({
+                horas: horasActuales,
+            });
+            // break;
+            window.location.href = "bancodetiempo.html";
+        });
+    });
+}

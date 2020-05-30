@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 let selectedFile;
 
-$("#file").on("change", function (event) {
+$("#file").on("change", function(event) {
     selectedFile = event.target.files[0];
 });
 
@@ -30,7 +30,7 @@ btnUploadDoc.onclick = () => {
 
     uploadTask.on(
         "state_changed",
-        function (snapshot) {
+        function(snapshot) {
             // Observe state change events such as progress, pause, and resume
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
             var progress =
@@ -45,15 +45,15 @@ btnUploadDoc.onclick = () => {
                     break;
             }
         },
-        function (error) {
+        function(error) {
             // Handle unsuccessful uploads
         },
-        function () {
+        function() {
             // Handle successful uploads on complete
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             uploadTask.snapshot.ref
                 .getDownloadURL()
-                .then(function (downloadURL) {
+                .then(function(downloadURL) {
                     let url = downloadURL;
                     console.log("URL", url);
 
@@ -73,6 +73,8 @@ btnUploadDoc.onclick = () => {
                         let description = document.getElementById("textarea1")
                             .value;
 
+                        let hoursInt = parseInt(hours, 10); // pasar a entero en base 10
+
                         banco = database.ref(`ofertasBdT`);
 
                         banco.push().set({
@@ -84,46 +86,44 @@ btnUploadDoc.onclick = () => {
                         });
 
                         referenciaUsuarios = database.ref(`usuariosBdT`);
+                        let actualizar;
 
                         referenciaUsuarios.once("value", (snap) => {
                             const usuariosBdT = snap.val();
-                            console.log("Entra");
+                            // console.log("Entra");
+                            // console.log(snap.val());
 
                             for (const i in usuariosBdT) {
                                 if (usuariosBdT[i].correo === email) {
                                     actualizar = database.ref(
                                         `usuariosBdT/${i}`
                                     );
-
-                                    console.log("AQUI", i);
-
-                                    let horasActuales;
-
-                                    actualizar.on("value", (spshot) => {
-                                        console.log("LOG", spshot.val());
-                                        horasActuales = spshot.val().horas;
-                                    });
-
-                                    console.log(horasActuales);
-
-                                    horasActuales += hours;
-
-                                    console.log(horasActuales);
-
-                                    actualizar.update({
-                                        horas: horasActuales,
-                                    });
-                                    break;
                                 }
                             }
-                            window.location.href = "bancodetiempo.html";
+                            let horasActuales;
+                            actualizar.once("value", (spshot) => {
+                                // console.log("LOG", spshot.val());
+                                horasActuales = spshot.val().horas;
+                                // console.log(horasActuales);
+                                horasActualesInt = parseInt(horasActuales, 10);
+                                horasActualesInt += hoursInt;
+                                horasActuales = horasActualesInt.toString(10);
+
+                                // console.log(horasActuales);
+                                actualizar.update({
+                                    horas: horasActuales,
+                                });
+                                // break;
+                                window.location.href = "bancodetiempo.html";
+                            })
+
+
                         });
                     }
                     // console.log("File available at", downloadURL);
                 });
         }
     );
-
     // console.log("URL", url);
 
     // //Enviar todo.

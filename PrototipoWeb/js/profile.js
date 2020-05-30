@@ -13,14 +13,14 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 referenciaUsuarios = database.ref(`usuariosBdT`);
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("email")) {
         const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
 
-        for (const i in navsInicioSesion) {
-            navsInicioSesion[i].setAttribute("href", "profile.html");
-            navsInicioSesion[i].textContent = "Tu perfil";
-        }
+        // for (const i in navsInicioSesion) {
+        //     navsInicioSesion[i].setAttribute("href", "profile.html");
+        //     navsInicioSesion[i].textContent = "Tu perfil";
+        // }
 
         const divInfoPerfil = document.querySelector(".infoPerfil");
 
@@ -30,19 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
             for (const i in usuariosBdT) {
                 if (usuariosBdT[i].correo === localStorage.getItem("email")) {
                     const nombre = document.createElement("p");
-                    nombre.classList.add("contacto");
+                    nombre.classList.add("nombre");
                     nombre.textContent = `Nombre: ${usuariosBdT[i].nombre}`;
                     divInfoPerfil.appendChild(nombre);
 
                     const apellidos = document.createElement("p");
-                    apellidos.classList.add("contacto");
+                    apellidos.classList.add("apellidos");
                     apellidos.textContent = `Apellidos: ${usuariosBdT[i].apellidos}`;
                     divInfoPerfil.appendChild(apellidos);
 
-                    const contacto = document.createElement("p");
-                    contacto.classList.add("contacto");
-                    contacto.textContent = `Horas: ${usuariosBdT[i].horas}`;
-                    divInfoPerfil.appendChild(contacto);
+                    const horas = document.createElement("p");
+                    horas.classList.add("horas");
+                    horas.textContent = `Horas: ${usuariosBdT[i].horas}`;
+                    divInfoPerfil.appendChild(horas);
 
                     const contacto = document.createElement("p");
                     contacto.classList.add("contacto");

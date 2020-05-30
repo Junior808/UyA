@@ -53,6 +53,7 @@ btnSignUp.onclick = () => {
                 nombre: nombre,
                 apellidos: apellido,
                 correo: email,
+                horas: 5,
             });
             window.location.href = "bancodetiempo.html";
         }

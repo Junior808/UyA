@@ -55,7 +55,17 @@ h1 {
     margin: 1em;
 }
 
+
 /* Otras páginas */
+
+.container-login {
+    margin: 2em;
+    flex-direction: column;
+}
+
+.container-profile {
+    margin: 2em;
+}
 
 .btn {
     background-color: var(--first);
@@ -105,6 +115,7 @@ h1 {
     color: var(--second);
 }
 
+
 /* .container-tiempo .card-stacked .doc {
     border: 2px solid var(--first);
     border-radius: 25%;
@@ -117,6 +128,26 @@ h1 {
 .container-tiempo .card-stacked .doc:hover {
     font-weight: bold;
     text-decoration: underline var(--second);
+}
+
+.container-profile .infoPerfil .nombre {
+    font-weight: bold;
+    color: var(--second);
+}
+
+.container-profile .infoPerfil .apellidos {
+    font-weight: bold;
+    color: var(--second);
+}
+
+.container-profile .infoPerfil .horas {
+    font-weight: bold;
+    color: var(--fifth);
+}
+
+.container-profile .infoPerfil .contacto {
+    font-weight: bold;
+    color: var(--third);
 }
 
 .container-uploaddoc {
@@ -144,6 +175,7 @@ h1 {
 .container-privacity {
     margin: 2em;
 }
+
 
 /* .card-profile {
     box-shadow: 2px 2px 2px #000;

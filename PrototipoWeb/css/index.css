@@ -189,3 +189,15 @@ h1 {
 .hiddenProfile {
     display: none;
 }
+
+.container-equipo .nombre {
+    font-weight: bold;
+    color: var(--first);
+    text-align: center;
+    font-size: larger;
+}
+
+.container-equipo .info {
+    font-weight: bold;
+    color: var(--second);
+}

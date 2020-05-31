@@ -20,9 +20,7 @@ usuariosBdT.on("value", (snapshot) => {
     const usuarios = snapshot.val();
     for (const i in usuarios) {
         correosExistentes.push(usuarios[i].correo);
-        // console.log(usuarios[i].correo);
     }
-    // console.log(correosExistentes);
 });
 
 //Registro

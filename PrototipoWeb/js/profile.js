@@ -15,13 +15,6 @@ referenciaUsuarios = database.ref(`usuariosBdT`);
 
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("email")) {
-        // const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
-
-        // for (const i in navsInicioSesion) {
-        //     navsInicioSesion[i].setAttribute("href", "profile.html");
-        //     navsInicioSesion[i].textContent = "Tu perfil";
-        // }
-
         const divInfoPerfil = document.querySelector(".profile-info");
 
         referenciaUsuarios.once("value", (snapshot) => {

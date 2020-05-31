@@ -53,10 +53,6 @@ banco.once("value", (snapshot) => {
         doc.addEventListener("click", clickDocumento(ofertas[i].hours));
         oferta.appendChild(doc);
 
-        // <p tabindex="0">Título: ${ofertas[i].title}</p>
-        // <p tabindex="0">${ofertas[i].description}</p>
-        // oferta.innerHTML += `
-        // <a href=${ofertas[i].url}>Documento</a>`;
         cardHorizontal.appendChild(oferta);
         contenedor.appendChild(cardHorizontal);
         element.appendChild(contenedor);
@@ -73,8 +69,6 @@ function clickDocumento(tiempo) {
 
     referenciaUsuarios.once("value", (snap) => {
         const usuariosBdT = snap.val();
-        // console.log("Entra");
-        // console.log(snap.val());
 
         for (const i in usuariosBdT) {
             if (usuariosBdT[i].correo === email) {
@@ -83,18 +77,14 @@ function clickDocumento(tiempo) {
         }
         let horasActuales;
         actualizar.once("value", (spshot) => {
-            // console.log("LOG", spshot.val());
             horasActuales = spshot.val().horas;
-            // console.log(horasActuales);
             horasActualesInt = parseInt(horasActuales, 10);
             horasActualesInt -= hoursInt;
             horasActuales = horasActualesInt.toString(10);
 
-            // console.log(horasActuales);
             actualizar.update({
                 horas: horasActuales,
             });
-            // break;
             window.location.href = "bancodetiempo.html";
         });
     });

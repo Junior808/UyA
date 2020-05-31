@@ -20,9 +20,7 @@ usuariosBdT.on("value", (snapshot) => {
     const usuarios = snapshot.val();
     for (const i in usuarios) {
         correosExistentes.push(usuarios[i].correo);
-        // console.log(usuarios[i].correo);
     }
-    // console.log(correosExistentes);
 });
 
 const btnSignIn = document.querySelector("#btnSignIn");
@@ -31,14 +29,9 @@ btnSignIn.onclick = () => {
     let email = document.getElementById("email").value;
     if (correosExistentes.includes(email)) {
         localStorage.setItem("email", email);
-        // alert("Se le redirigirá a nuestro banco de tiempo.");
         window.location.href = "bancodetiempo.html";
     } else {
         const mensajeError = document.querySelector(".email-error");
         mensajeError.textContent = "El email o la contraseña no son correctos.";
-        // alert(
-        //     "El usuario no se encuentra registrado. Se le redirigirá a 'Registrarse'"
-        // );
-        // window.location.href = "signup.html";
     }
 };

@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 let selectedFile;
 
-$("#file").on("change", function(event) {
+$("#file").on("change", function (event) {
     selectedFile = event.target.files[0];
 });
 
@@ -30,7 +30,7 @@ btnUploadDoc.onclick = () => {
 
     uploadTask.on(
         "state_changed",
-        function(snapshot) {
+        function (snapshot) {
             // Observe state change events such as progress, pause, and resume
             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
             var progress =
@@ -45,20 +45,19 @@ btnUploadDoc.onclick = () => {
                     break;
             }
         },
-        function(error) {
+        function (error) {
             // Handle unsuccessful uploads
         },
-        function() {
+        function () {
             // Handle successful uploads on complete
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             uploadTask.snapshot.ref
                 .getDownloadURL()
-                .then(function(downloadURL) {
+                .then(function (downloadURL) {
                     let url = downloadURL;
                     console.log("URL", url);
 
                     //Enviar todo.
-                    // let email = document.getElementById("email").value;
                     let email = localStorage.getItem("email");
                     console.log(email);
                     if (email === " " || email === null) {
@@ -67,7 +66,6 @@ btnUploadDoc.onclick = () => {
                         );
                         window.location.href = "login.html";
                     } else {
-                        // let emailError = document.querySelector(".email-error");
                         let title = document.getElementById("title_doc").value;
                         let hours = document.getElementById("hours").value;
                         let description = document.getElementById("textarea1")
@@ -90,8 +88,6 @@ btnUploadDoc.onclick = () => {
 
                         referenciaUsuarios.once("value", (snap) => {
                             const usuariosBdT = snap.val();
-                            // console.log("Entra");
-                            // console.log(snap.val());
 
                             for (const i in usuariosBdT) {
                                 if (usuariosBdT[i].correo === email) {
@@ -102,43 +98,19 @@ btnUploadDoc.onclick = () => {
                             }
                             let horasActuales;
                             actualizar.once("value", (spshot) => {
-                                // console.log("LOG", spshot.val());
                                 horasActuales = spshot.val().horas;
-                                // console.log(horasActuales);
                                 horasActualesInt = parseInt(horasActuales, 10);
                                 horasActualesInt += hoursInt;
                                 horasActuales = horasActualesInt.toString(10);
 
-                                // console.log(horasActuales);
                                 actualizar.update({
                                     horas: horasActuales,
                                 });
-                                // break;
                                 window.location.href = "bancodetiempo.html";
-                            })
-
-
+                            });
                         });
                     }
-                    // console.log("File available at", downloadURL);
                 });
         }
     );
-    // console.log("URL", url);
-
-    // //Enviar todo.
-    // let email = document.getElementById("email").value;
-    // // let emailError = document.querySelector(".email-error");
-    // let title = document.getElementById("title_doc").value;
-    // let hours = document.getElementById("hours").value;
-    // let description = document.getElementById("textarea1").value;
-
-    // banco = database.ref(`ofertasBdT`);
-
-    // banco.push().set({
-    //     title: title,
-    //     hours: hours,
-    //     description: description,
-    //     email: email,
-    // });
 };

@@ -8,6 +8,10 @@
     --fifth: #750015;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--first);
 }
@@ -18,8 +22,8 @@ body {
     align-items: center;
 }
 
-.input-field>label {
-    color: var(--first)
+.input-field > label {
+    color: var(--first);
 }
 
 nav .brand-logo {
@@ -62,7 +66,6 @@ nav,
 h1 {
     margin: 1em;
 }
-
 
 /* Otras páginas */
 

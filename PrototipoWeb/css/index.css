@@ -18,6 +18,11 @@ body {
     align-items: center;
 }
 
+nav .brand-logo {
+    font-size: 1.5em;
+    line-height: 2.5em;
+}
+
 nav,
 .page-footer {
     background-color: var(--second);
@@ -54,6 +59,7 @@ h1 {
     margin: 1em;
 }
 
+
 /* Otras páginas */
 
 .container-login {
@@ -65,6 +71,10 @@ h1 {
     margin: 2em;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+.container-profile .card-stacked {
+    margin: 1em;
 }
 
 .btn {

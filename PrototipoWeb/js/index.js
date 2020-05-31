@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
         for (const i in navsRegistro) {
             navsRegistro[i].style.display = 'none';
         }
-    } else {
-        console.log("NOPE");
     }
+    // else {
+    //     console.log("NOPE");
+    // }
 });

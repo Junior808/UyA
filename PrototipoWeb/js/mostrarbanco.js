@@ -50,7 +50,7 @@ banco.once("value", (snapshot) => {
         doc.classList.add("btn");
         doc.setAttribute("href", `${ofertas[i].url}`);
         doc.textContent = "Acceder al documento";
-        doc.addEventListener("click", clickDocumento(ofertas[i].hours));
+        doc.addEventListener.onclick = () => clickDocumento(ofertas[i].hours);
         oferta.appendChild(doc);
 
         cardHorizontal.appendChild(oferta);

@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
         const navsRegistro = document.querySelectorAll(".navRegistro");
 
+        const footerProfile = document.querySelector(".hiddenProfile");
+        footerProfile.classList.remove("hiddenProfile");
+
         for (const i in navsInicioSesion) {
             navsInicioSesion[i].href = "profile.html";
             navsInicioSesion[i].textContent = "Tu perfil";

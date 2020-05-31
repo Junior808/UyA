@@ -130,6 +130,10 @@ h1 {
     text-decoration: underline var(--second);
 }
 
+.container-tiempo .elements .btn {
+    margin: 1em;
+}
+
 .container-profile .infoPerfil .nombre {
     font-weight: bold;
     color: var(--second);
@@ -152,6 +156,7 @@ h1 {
 
 .container-uploaddoc {
     margin: 2em;
+    flex-direction: column;
 }
 
 .container-equipo {
@@ -170,6 +175,7 @@ h1 {
 
 .container-contact {
     margin: 2em;
+    flex-direction: column;
 }
 
 .container-privacity {

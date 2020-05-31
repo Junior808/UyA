@@ -12,8 +12,7 @@
     <link href="./css/index.css" rel="stylesheet" type="text/css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script defer src="js/index.js"></script>
 
     <meta name="description" content="Página de subida de documentos del Banco de Tiempo." />
@@ -54,48 +53,37 @@
 
     <h1 tabindex="0">Subir tu documento</h1>
 
-    <div class="container-uploaddoc">
-        <!-- <div class="row">
-            <div class="input-field col s12 l6">
-                <input id="email" type="email" class="validate" required />
-                <label for="email">Email</label>
-            </div>
-            <div class="input-field col s12 l6">
-                <input id="password" type="password" class="validate" minlength="6" required />
-                <label for="password">Password</label>
-            </div>
-        </div> -->
+    <div class="container-uploaddoc flex">
         <div class="row">
             <div class="input-field col s6 l6">
-                <input id="title_doc" type="text" class="validate" required />
+                <input id="title_doc" type="text" size="35" class="validate" required />
                 <label for="title_doc">Título del documento</label>
             </div>
             <div class="input-field col s6 l6">
-                <input id="hours" type="number" class="validate" required />
+                <input id="hours" type="number" size="35" class="validate" required />
                 <label for="hours">Horas invertidas</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 l12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <textarea id="textarea1" cols="60" class="materialize-textarea"></textarea>
                 <label for="textarea1">Descripción</label>
             </div>
         </div>
         <div class="row">
-            <div class="container col s12 l6">
+            <div class="container col s12 l12">
                 <div class="file-field input-field">
                     <div class="btn">
-                        <span>Subir documento</span>
                         <label for="file">Seleccione un documento</label>
                         <input id="file" type="file" required />
                     </div>
                     <div class="file-path-wrapper">
+                        <input id="nombreArchivo" size="10" class="file-path validate" type="text">
                         <label for="nombreArchivo">Nombre del fichero</label>
-                        <input id="nombreArchivo" class="file-path validate" type="text">
                     </div>
                 </div>
             </div>
-            <div class="container col s12 l6 flex">
+            <div class="container col s12 l12 flex">
                 <button id="btnUploadDoc" class="btn waves-effect waves-light" type="submit" name="action">Enviar
                     <i class="material-icons right">send</i>
                 </button>
@@ -106,24 +94,29 @@
 
 
     <footer class="page-footer">
-        <div class="row">
-            <div class="col l6 s12">
-                <p class="infoFooter" tabindex="0">Páginas del sitio</p>
-                <!-- no sé qué titulo ponerle a esto -->
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="index.html">Inicio</a></li>
-                    <li><a class="grey-text text-lighten-3" href="signup.html">Registrarse</a></li>
-                    <li><a class="grey-text text-lighten-3" href="bancodetiempo.html">Banco de tiempo</a></li>
-                    <li><a class="grey-text text-lighten-3" href="uploaddoc.html">Subir documento</a></li>
-                </ul>
-            </div>
-            <div class="col l6 s12">
-                <p class="infoFooter" tabindex="0">Más información</p>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="team.html">Equipo</a></li>
-                    <li><a class="grey-text text-lighten-3" href="contact.html">Contacta con nosotros</a></li>
-                    <li><a class="grey-text text-lighten-3" href="privacity.html">Política de privacidad</a></li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="infoFooter" tabindex="0">Páginas del sitio</p>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Inicio</a></li>
+                        <li>
+                            <a class="hiddenProfile grey-text text-lighten-3" href="profile.html">Tu perfil</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="login.html">Iniciar sesión</a></li>
+                        <li><a class="grey-text text-lighten-3" href="signup.html">Registrarse</a></li>
+                        <li><a class="grey-text text-lighten-3" href="bancodetiempo.html">Banco de tiempo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="uploaddoc.html">Subir documento</a></li>
+                    </ul>
+                </div>
+                <div class="col l6 s12">
+                    <p class="infoFooter" tabindex="0">Más información</p>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="team.html">Equipo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="contact.html">Contacta con nosotros</a></li>
+                        <li><a class="grey-text text-lighten-3" href="privacity.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer-copyright" tabindex="0">

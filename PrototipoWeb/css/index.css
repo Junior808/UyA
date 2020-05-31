@@ -174,3 +174,7 @@ h1 {
 .container-privacity {
     margin: 2em;
 }
+
+.hiddenProfile {
+    display: none;
+}

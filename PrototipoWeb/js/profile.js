@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 referenciaUsuarios = database.ref(`usuariosBdT`);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("email")) {
         // const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
 
@@ -50,3 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("NOPE");
     }
 });
+
+const btnLogOut = document.querySelector("#btnLogOut");
+
+btnLogOut.onclick = () => {
+    localStorage.removeItem("email");
+    window.location.href = "index.html";
+};

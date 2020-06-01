@@ -35,3 +35,7 @@ btnSignIn.onclick = () => {
         mensajeError.textContent = "El email o la contraseña no son correctos.";
     }
 };
+
+if (localStorage.getItem("email")) {
+    window.location.href = "bancodetiempo.html";
+}

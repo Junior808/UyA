@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var instancesParallax = M.Parallax.init(elemsParallax);
 
     if (localStorage.getItem("email")) {
-        console.log(localStorage.getItem("email"));
         const navsInicioSesion = document.querySelectorAll(".navInicioSesion");
         const navsRegistro = document.querySelectorAll(".navRegistro");
 
@@ -22,7 +21,4 @@ document.addEventListener("DOMContentLoaded", function() {
             navsRegistro[i].style.display = 'none';
         }
     }
-    // else {
-    //     console.log("NOPE");
-    // }
 });

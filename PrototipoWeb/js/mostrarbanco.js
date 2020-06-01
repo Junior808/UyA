@@ -15,54 +15,63 @@ banco = database.ref(`ofertasBdT`);
 
 const element = document.querySelector(".elements");
 
-banco.once("value", (snapshot) => {
-    const ofertas = snapshot.val();
-    console.log(ofertas);
+if (localStorage.getItem("email")) {
+    banco.once("value", (snapshot) => {
+        const ofertas = snapshot.val();
+        console.log(ofertas);
 
-    let numberId = 1;
-    for (const i in ofertas) {
-        const contenedor = document.createElement("div");
-        contenedor.classList.add("col", "s12", "l6");
+        let numberId = 1;
+        for (const i in ofertas) {
+            const contenedor = document.createElement("div");
+            contenedor.classList.add("col", "s12", "l6");
 
-        const cardHorizontal = document.createElement("div");
-        cardHorizontal.classList.add("card", "horizontal");
+            const cardHorizontal = document.createElement("div");
+            cardHorizontal.classList.add("card", "horizontal");
 
-        const oferta = document.createElement("div");
-        oferta.classList.add("card-stacked");
-        oferta.setAttribute("id", `elem${numberId}`);
+            const oferta = document.createElement("div");
+            oferta.classList.add("card-stacked");
+            oferta.setAttribute("id", `elem${numberId}`);
 
-        const title = document.createElement("div");
-        title.classList.add("title");
-        title.textContent = `Título: ${ofertas[i].title}`;
-        title.setAttribute("tabindex", "0");
-        oferta.appendChild(title);
+            const title = document.createElement("div");
+            title.classList.add("title");
+            title.textContent = `Título: ${ofertas[i].title}`;
+            title.setAttribute("tabindex", "0");
+            oferta.appendChild(title);
 
-        const description = document.createElement("div");
-        description.classList.add("description");
-        description.textContent = `${ofertas[i].description}`;
-        description.setAttribute("tabindex", "0");
-        oferta.appendChild(description);
+            const description = document.createElement("div");
+            description.classList.add("description");
+            description.textContent = `${ofertas[i].description}`;
+            description.setAttribute("tabindex", "0");
+            oferta.appendChild(description);
 
-        const contacto = document.createElement("div");
-        contacto.classList.add("contacto");
-        contacto.textContent = `Contacto: ${ofertas[i].email}`;
-        contacto.setAttribute("tabindex", "0");
-        oferta.appendChild(contacto);
+            const contacto = document.createElement("div");
+            contacto.classList.add("contacto");
+            contacto.textContent = `Contacto: ${ofertas[i].email}`;
+            contacto.setAttribute("tabindex", "0");
+            oferta.appendChild(contacto);
 
-        const doc = document.createElement("a");
-        doc.classList.add("btn");
-        doc.setAttribute("href", `${ofertas[i].url}`);
-        doc.textContent = "Acceder al documento";
-        doc.setAttribute("tabindex", "0");
-        doc.addEventListener.onclick = () => clickDocumento(ofertas[i].hours);
-        oferta.appendChild(doc);
+            const doc = document.createElement("a");
+            doc.classList.add("btn");
+            doc.setAttribute("href", `${ofertas[i].url}`);
+            doc.textContent = "Acceder al documento";
+            doc.setAttribute("tabindex", "0");
+            doc.addEventListener.onclick = () =>
+                clickDocumento(ofertas[i].hours);
+            oferta.appendChild(doc);
 
-        cardHorizontal.appendChild(oferta);
-        contenedor.appendChild(cardHorizontal);
-        element.appendChild(contenedor);
-        numberId++;
-    }
-});
+            cardHorizontal.appendChild(oferta);
+            contenedor.appendChild(cardHorizontal);
+            element.appendChild(contenedor);
+            numberId++;
+        }
+    });
+} else {
+    const pError = document.createElement("p");
+    pError.classList.add("error-msg");
+    pError.textContent = "Inicie sesión o regístrese para ver los documentos.";
+    pError.setAttribute("tabindex", "0");
+    element.appendChild(pError);
+}
 
 function clickDocumento(tiempo) {
     let email = localStorage.getItem("email");

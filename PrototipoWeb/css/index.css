@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 
-.input-field > label {
+.input-field>label {
     color: var(--first);
 }
 
@@ -55,11 +55,12 @@ nav,
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2em;
-    
 }
+
 .card-title {
     font-size: 2.5em;
 }
+
 .card-content {
     flex-direction: column;
     align-items: flex-start;
@@ -78,6 +79,7 @@ nav,
 h1 {
     margin: 1em;
 }
+
 
 /* Otras páginas */
 
@@ -101,6 +103,10 @@ h1 {
 }
 
 .btn:hover {
+    background-color: var(--third);
+}
+
+.btn:focus {
     background-color: var(--third);
 }
 

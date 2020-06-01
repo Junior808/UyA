@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 referenciaUsuarios = database.ref(`usuariosBdT`);
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("email")) {
         const divInfoPerfil = document.querySelector(".profile-info");
 
@@ -25,16 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     const nombre = document.createElement("p");
                     nombre.classList.add("nombre");
                     nombre.textContent = `${usuariosBdT[i].nombre} ${usuariosBdT[i].apellidos}`;
+                    nombre.setAttribute("tabindex", "0");
                     divInfoPerfil.appendChild(nombre);
 
                     const horas = document.createElement("p");
                     horas.classList.add("horas");
                     horas.textContent = `Horas: ${usuariosBdT[i].horas}`;
+                    horas.setAttribute("tabindex", "0");
                     divInfoPerfil.appendChild(horas);
 
                     const contacto = document.createElement("p");
                     contacto.classList.add("contacto");
                     contacto.textContent = localStorage.getItem("email");
+                    contacto.setAttribute("tabindex", "0");
                     divInfoPerfil.appendChild(contacto);
                 }
             }

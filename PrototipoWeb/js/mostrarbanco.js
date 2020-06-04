@@ -44,6 +44,18 @@ if (localStorage.getItem("email")) {
             description.setAttribute("tabindex", "0");
             oferta.appendChild(description);
 
+            const horasDoc = document.createElement("div");
+            horasDoc.classList.add("description");
+            horasDoc.textContent = `Horas: ${ofertas[i].hours}`;
+            horasDoc.setAttribute("tabindex", "0");
+            oferta.appendChild(horasDoc);
+
+            const fechaDoc = document.createElement("div");
+            fechaDoc.classList.add("description");
+            fechaDoc.textContent = `Fecha: ${ofertas[i].fecha}`;
+            fechaDoc.setAttribute("tabindex", "0");
+            oferta.appendChild(fechaDoc);
+
             const contacto = document.createElement("div");
             contacto.classList.add("contacto");
             contacto.textContent = `Contacto: ${ofertas[i].email}`;

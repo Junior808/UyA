@@ -72,6 +72,8 @@ btnUploadDoc.onclick = () => {
                             .value;
 
                         let hoursInt = parseInt(hours, 10); // pasar a entero en base 10
+                        let fecha = new Date();
+                        // console.log(fecha.toLocaleDateString());
 
                         banco = database.ref(`ofertasBdT`);
 
@@ -81,6 +83,7 @@ btnUploadDoc.onclick = () => {
                             description: description,
                             email: email,
                             url: url,
+                            fecha: fecha.toLocaleDateString(),
                         });
 
                         referenciaUsuarios = database.ref(`usuariosBdT`);

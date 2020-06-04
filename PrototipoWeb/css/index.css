@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 
-.input-field>label {
+.input-field > label {
     color: var(--first);
 }
 
@@ -79,7 +79,6 @@ nav,
 h1 {
     margin: 1em;
 }
-
 
 /* Otras páginas */
 
@@ -238,4 +237,8 @@ h1 {
 .container-equipo .info {
     font-weight: bold;
     color: var(--second);
+}
+
+.file-path-wrapper label {
+    color: black;
 }
